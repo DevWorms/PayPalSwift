@@ -14,6 +14,8 @@
 		3B09150A1C24C14B004D020C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0915081C24C14B004D020C /* LaunchScreen.storyboard */; };
 		3B0915151C24C14C004D020C /* PayPalSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0915141C24C14C004D020C /* PayPalSwiftTests.swift */; };
 		3B0915201C24C14C004D020C /* PayPalSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09151F1C24C14C004D020C /* PayPalSwiftUITests.swift */; };
+		3B09152E1C24EC0F004D020C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3B09152D1C24EC0F004D020C /* Podfile */; };
+		86E059BA7C233E4C30642D9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0909EA4316F07C26D496F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		3B09151B1C24C14C004D020C /* PayPalSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayPalSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B09151F1C24C14C004D020C /* PayPalSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalSwiftUITests.swift; sourceTree = "<group>"; };
 		3B0915211C24C14C004D020C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B09152D1C24EC0F004D020C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9AA0909EA4316F07C26D496F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3786E0A55A7E6CB175D2E43 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B6FB8C59556D7447928AECF6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E059BA7C233E4C30642D9D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +81,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		104D68DF096B0466E8EFC224 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6FB8C59556D7447928AECF6 /* Pods.debug.xcconfig */,
+				A3786E0A55A7E6CB175D2E43 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		28FCFF23754C7F4861DD99B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AA0909EA4316F07C26D496F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3B0914F31C24C14B004D020C = {
 			isa = PBXGroup;
 			children = (
+				3B09152D1C24EC0F004D020C /* Podfile */,
 				3B0914FE1C24C14B004D020C /* PayPalSwift */,
 				3B0915131C24C14C004D020C /* PayPalSwiftTests */,
 				3B09151E1C24C14C004D020C /* PayPalSwiftUITests */,
 				3B0914FD1C24C14B004D020C /* Products */,
+				104D68DF096B0466E8EFC224 /* Pods */,
+				28FCFF23754C7F4861DD99B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B0915241C24C14C004D020C /* Build configuration list for PBXNativeTarget "PayPalSwift" */;
 			buildPhases = (
+				64468FD2D827569F620E8C39 /* Check Pods Manifest.lock */,
 				3B0914F81C24C14B004D020C /* Sources */,
 				3B0914F91C24C14B004D020C /* Frameworks */,
 				3B0914FA1C24C14B004D020C /* Resources */,
+				B6B4507E084D781B3A32505A /* Embed Pods Frameworks */,
+				01D0847F5BC7634EF3ED1FDB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +261,7 @@
 			files = (
 				3B09150A1C24C14B004D020C /* LaunchScreen.storyboard in Resources */,
 				3B0915071C24C14B004D020C /* Assets.xcassets in Resources */,
+				3B09152E1C24EC0F004D020C /* Podfile in Resources */,
 				3B0915051C24C14B004D020C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +281,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01D0847F5BC7634EF3ED1FDB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64468FD2D827569F620E8C39 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B6B4507E084D781B3A32505A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B0914F81C24C14B004D020C /* Sources */ = {
@@ -395,6 +474,7 @@
 		};
 		3B0915251C24C14C004D020C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6FB8C59556D7447928AECF6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PayPalSwift/Info.plist;
@@ -406,6 +486,7 @@
 		};
 		3B0915261C24C14C004D020C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3786E0A55A7E6CB175D2E43 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PayPalSwift/Info.plist;
@@ -482,6 +563,7 @@
 				3B0915261C24C14C004D020C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B0915271C24C14C004D020C /* Build configuration list for PBXNativeTarget "PayPalSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +572,7 @@
 				3B0915291C24C14C004D020C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B09152A1C24C14C004D020C /* Build configuration list for PBXNativeTarget "PayPalSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +581,7 @@
 				3B09152C1C24C14C004D020C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
