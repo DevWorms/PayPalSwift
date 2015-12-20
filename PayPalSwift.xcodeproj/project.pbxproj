@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B08BBF21C275B1100E188B4 /* ZZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZZAppDelegate.h; path = "PayPal requires/ZZAppDelegate.h"; sourceTree = "<group>"; };
+		3B08BBFA1C275C9700E188B4 /* PayPalSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PayPalSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		3B0914FC1C24C14B004D020C /* PayPalSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayPalSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0914FF1C24C14B004D020C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B0915011C24C14B004D020C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3B08BBED1C27596500E188B4 /* Paypal requires */ = {
+			isa = PBXGroup;
+			children = (
+				3B08BBF21C275B1100E188B4 /* ZZAppDelegate.h */,
+				3B08BBFA1C275C9700E188B4 /* PayPalSwift-Bridging-Header.h */,
+			);
+			name = "Paypal requires";
+			sourceTree = "<group>";
+		};
 		3B0914F31C24C14B004D020C = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +135,7 @@
 		3B0914FE1C24C14B004D020C /* PayPalSwift */ = {
 			isa = PBXGroup;
 			children = (
+				3B08BBED1C27596500E188B4 /* Paypal requires */,
 				3B0914FF1C24C14B004D020C /* AppDelegate.swift */,
 				3B0915011C24C14B004D020C /* ViewController.swift */,
 				3B0915031C24C14B004D020C /* Main.storyboard */,
@@ -477,10 +489,14 @@
 			baseConfigurationReference = B6FB8C59556D7447928AECF6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PayPalSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.PayPalSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PayPalSwift/PayPalSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -489,10 +505,13 @@
 			baseConfigurationReference = A3786E0A55A7E6CB175D2E43 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PayPalSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devworms.PayPalSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PayPalSwift/PayPalSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
